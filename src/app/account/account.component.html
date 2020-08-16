@@ -1,0 +1,19 @@
+<div class="row" class="account" *ngFor="let account of accounts; let i=index">
+    <div class="col-sm-12">
+        <div>
+            <b>{{account.name}}</b>
+        </div>
+        <hr>
+        <p>This account is {{account.status}}</p>
+        <div>
+            <button class="btn btn-success" style="margin-right: 10px;" type="button"
+                (click)="updateStatus(i, 'active')">
+                Set to 'active'</button>
+            <button class="btn btn-danger" style="margin-right: 10px;" type="button"
+                (click)="updateStatus(i, 'inactive')">
+                Set to 'inactive'</button>
+            <button class="btn btn-secondary" type="button" (click)="updateStatus(i, 'unknown')"> Set to
+                'unknown'</button>
+        </div>
+    </div>
+</div>

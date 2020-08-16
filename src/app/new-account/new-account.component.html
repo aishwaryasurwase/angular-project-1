@@ -1,0 +1,22 @@
+<div class="row" style="padding-top: 20px;">
+    <div class="col-sm-12">
+        <form [formGroup]="accountForm" (ngSubmit)="onFormSubmit()">
+            <div class="form-group">
+                <label for="accountname">Account name</label>
+                <input type="text" class="form-control" formControlName="accountname" id="accountname"
+                    autocomplete="off" placeholder="Enter account name">
+            </div>
+            <div class="form-group">
+                <label for="accountstatus">Account status</label>
+                <select class="form-control" formControlName="accountstatus" id="accountstatus">
+                    <option [selected]=true>Active</option>
+                    <option>Inactive</option>
+                    <option>Unknown</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                Add account
+            </button>
+        </form>
+    </div>
+</div>
